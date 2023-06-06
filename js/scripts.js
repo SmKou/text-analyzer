@@ -1,3 +1,4 @@
+
 /** BUSINESS LOGIC
  * Functionality:
  * - count number of words in text passage
@@ -6,9 +7,8 @@
  * - find positions of phrase, word or part of word in text passage
  * 
  * Functionality:
- * - Omit offensive words from text passage
- * Ex.
- * storage: ['zoinks', 'muppeteer', 'biffaroni', 'loopdaloop']
+ * - omit offensive words from text passage
+ * Ex. profanities: ['zoinks', 'muppeteer', 'biffaroni', 'loopdaloop']
  * @param text {String} "There are zoinks dogs everywhere, biffaroni!"
  * @return text {String} "There are dogs everywhere!"
  * Source: https://www.learnhowtoprogram.com/introduction-to-programming/arrays-and-looping/practice-extending-text-analyzer-business-logic-with-tdd
@@ -24,7 +24,7 @@
  * @returns {Boolean}
  */
 function isEmpty(testStr) {
-    return;
+    return testStr.trim().length === 0;
 }
 
 /**
@@ -33,7 +33,14 @@ function isEmpty(testStr) {
  * @returns {Number} no of words in text
  */
 function wordCounter(text) {
-    return;
+    if (isEmpty(text))
+        return 0;
+    let wordCount = 0;
+    const textArray = text.split(" ");
+    textArray.forEach(function(word) {
+        wordCount++;
+    });
+    return wordCount;
 }
 
 /**
@@ -42,7 +49,18 @@ function wordCounter(text) {
  * @returns {Number} 
  */
 function sentenceCounter(text) {
-    return;
+    if (isEmpty(text))
+        return 0;
+    let sentenceCount = 0;
+    const textArray = text.split("");
+    if (isEmpty(textArray[textArray.length - 1]))
+        textArray.pop();
+    textArray.forEach(
+        function (word) {
+            sentenceCount++;
+        }
+    );
+    return sentenceCount;
 }
 
 /**
@@ -52,6 +70,7 @@ function sentenceCounter(text) {
  * @returns {Number} no of occurrences in text
  */
 function numOfOccurrences(word, text) {
+    let 
     return;
 }
 
@@ -71,6 +90,15 @@ function occurrencesOfWords(text) {
  * @returns {Number[]}
  */
 function locateOccurrences(root, text) {
+    return;
+}
+
+/**
+ * Create a new string from text without profanities
+ * @param {String} text 
+ * @returns {String} text without profanities
+ */
+function removeProfanities(text) {
     return;
 }
 

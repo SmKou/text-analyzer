@@ -1,25 +1,25 @@
 Writing a test:
- * Describe: functionName()
+ * Function: functionName()
  * Test: description
  * Code: test
  * Expected output: value|object
 
 
-Describe: isEmpty()
-Test: "If a string is empty, return true, else false"
-
+Function: isEmpty()
+Test: "If a string is empty, return true"
 Code:
     const text = "Here is a String";
     isEmpty(text);
 Expected Output: true
 
+Test: "If a string is not empty, return false"
 Code:
     const text = "";
     isEmpty(text);
 Expected Output: false
 
 
-Describe: wordCounter()
+Function: wordCounter()
 Test: "It should return 1 if a passage has just one word."
 Code:
     const text = "hello";
@@ -39,10 +39,16 @@ Code:
 Expected Output: 2
 
 
-Describe: sentenceCounter()
+Function: sentenceCounter()
 Test: "It should return 1 if a passage has just one sentence."
 Code:
     const text = "hello";
+    sentenceCounter(text);
+Expected Output: 1
+
+Test: "It should return 1 if a passage has just one word and a period"
+Code:
+    const text = "hello.";
     sentenceCounter(text);
 Expected Output: 1
 
@@ -56,4 +62,46 @@ Test: "It should return 2 if a passage has 2 sentences."
 Code:
     const text="two words. second sentence"
     sentenceCounter(text);
+Expected Output: 2
+
+Function: numOfOccurrences()
+Test: "If both inputs are empty, return a 0"
+Code: 
+    const text = "";
+    numOfOccurences(text, text);
+Expected Output: 0
+
+Test: "If word input is empty and text is not, return a 0"
+Code:
+    const kool = "";
+    const what = "word";
+    numOfOccurences(kool, what);
+Expected Output: 0
+
+ Test: "If word is not empty and text is, return a 0"
+Code:
+    const what = "";
+    const kool = "word";
+    numOfOccurences(kool, what);
+Expected Output: 0
+
+Test: "If text does not contain the word, return 0"
+Code:
+    const kool = "word";
+    const what = "I have a sentence";
+    numOfOccurences(kool, what);
+Expected Output: 0
+
+Test: "If text does contain the word, return 1"
+Code:
+    const kool = "word";
+    const what = "I have a word";
+    numOfOccurences(kool, what);
+Expected Output: 1
+
+Test: "If text contains 2 occurences of word, return 2"
+Code:
+    const kool = "word";
+    const what = "word is word";
+    numOfOccurences(kool, what);
 Expected Output: 2
