@@ -21,3 +21,41 @@ This app uses a form to collect text and returns information about the text. Ana
     Total occurrences (of specified word)
     Passage (processed)
 
+## Setup
+
+This project does not accept pull requests.
+
+To fork this project:
+- Navigate to [repo]()
+- Click 'Fork' button
+- Fork creation form:
+  - select owner, if not specified or other than you
+  - enter name, if you would prefer another name
+
+To clone your fork:
+```bash
+git clone https://github.com/USERNAME/REPOSITORY_NAME.git
+git pull origin main
+```
+- Navigate to top level of directory and open index.html in browser.
+
+Receive updates from original project:
+```bash
+git remote add upstream https://github.com/SmKou/text-analyzer.git
+```
+
+Remove upstream:
+```bash
+git remote -v
+git remote rm upstream
+```
+
+Demo: [Github Pages]()
+
+## Known Bugs
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) 2023
