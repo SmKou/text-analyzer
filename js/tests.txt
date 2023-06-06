@@ -1,0 +1,59 @@
+Writing a test:
+ * Describe: functionName()
+ * Test: description
+ * Code: test
+ * Expected output: value|object
+
+
+Describe: isEmpty()
+Test: "If a string is empty, return true, else false"
+
+Code:
+    const text = "Here is a String";
+    isEmpty(text);
+Expected Output: true
+
+Code:
+    const text = "";
+    isEmpty(text);
+Expected Output: false
+
+
+Describe: wordCounter()
+Test: "It should return 1 if a passage has just one word."
+Code:
+    const text = "hello";
+    wordCounter(text);
+Expected Output: 1
+
+Test: "It should return 0 if a passage has nothing."
+Code:
+    const text = "";
+    wordCounter(text);
+Expected Output: 0
+
+Test: "It should return 2 if a passage has 2 words."
+Code:
+    const text="two words"
+    wordCounter(text);
+Expected Output: 2
+
+
+Describe: sentenceCounter()
+Test: "It should return 1 if a passage has just one sentence."
+Code:
+    const text = "hello";
+    sentenceCounter(text);
+Expected Output: 1
+
+Test: "It should return 0 if a passage has nothing."
+Code:
+    const text = "";
+    sentenceCounter(text);
+Expected Output: 0
+
+Test: "It should return 2 if a passage has 2 sentences."
+Code:
+    const text="two words. second sentence"
+    sentenceCounter(text);
+Expected Output: 2

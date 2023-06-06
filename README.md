@@ -13,4 +13,11 @@ Demonstration app of vanilla js and loops.
 
 ## Description
 
-This app uses a form to collect text and returns information about the text. Analysis consists of the number of words and sentences, and optionally, the number of instances of a given word.
+This app uses a form to collect text and returns information about the text. Analysis consists of the number of words and sentences, and optionally, the number of instances of a given word, and words or parts of words to bold. Internally, the analyzer removes words considered profane. The presented analysis consists of:
+
+    Total sentence count
+    Total word count
+    Total occurrences of each word in passage
+    Total occurrences (of specified word)
+    Passage (processed)
+
