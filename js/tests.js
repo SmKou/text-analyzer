@@ -6,7 +6,7 @@ function didFuncPassNB(three, four) {
     return three === four;
 }
  
-const didFuncPassNB = (three, four) => three === four
+// const didFuncPassNB = (three, four) => three === four
 
 /* isEmpty() Test 1 */
 let text = "Here is a String";
